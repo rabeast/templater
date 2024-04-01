@@ -2,7 +2,8 @@ export const staffPerson = [
     /*{ name: 'markov', fullName: 'Василий М.', userName: '@haltandcatch', selected: true, },*/
     { name: 'meshkov', fullName: 'Александр Мешков', userName: '@okmeshkov', selected: true, },
     { name: 'zalygin', fullName: 'Михаил Залыгин', userName: '@mishanyazal', selected: true, },
-    { name: 'balamutin', fullName: 'Анатолий Баламутин', userName: '@dezm0d', selected: true, },
+    /*{ name: 'balamutin', fullName: 'Анатолий Баламутин', userName: '@dezm0d', selected: true, },*/
+    { name: 'grigoriev', fullName: 'Владимир Григорьев', userName: '@Lorenzo_Ruiz', selected: true, },
     { name: 'katukhov', fullName: 'Илья Катухов', userName: '@crpt_katukhov', selected: true, },
     { name: 'suprun', fullName: 'Иван Супрун', userName: '@lacronn', selected: true, },
     /*{ name: 'vorobiev', fullName: 'Павел Воробьёв', userName: '@crpt_vorobiev', selected: true, },*/
@@ -31,12 +32,19 @@ export const dataNotify = {
             fullName: 'Михаил Залыгин',
             userName: '@mishanyazal'
         },
-        {
+        /*{
             alwaysSelected: true,
             selected: true,
             name: 'balamutin',
             fullName: 'Анатолий Баламутин',
             userName: '@dezm0d'
+        },*/
+         {
+            alwaysSelected: true,
+            selected: true,
+            name: 'grigoriev',
+            fullName: 'Владимир Григорьев',
+            userName: '@Lorenzo_Ruiz'
         },
         {
             alwaysSelected: false,
@@ -65,12 +73,19 @@ export const dataNotify = {
     ],
 
     notifyStaff: [
-        {
+        /*{
             alwaysSelected: true,
             selected: true,
             name: 'balamutin',
             fullName: 'Анатолий Баламутин',
             userName: '@dezm0d',
+        },*/
+        {
+            alwaysSelected: true,
+            selected: true,
+            name: 'grigoriev',
+            fullName: 'Владимир Григорьев',
+            userName: '@Lorenzo_Ruiz',
         },
         {
             alwaysSelected: false,
