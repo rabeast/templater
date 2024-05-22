@@ -32,6 +32,10 @@ const DataForItem = {
             value: 'АТП'
         },
         {
+            label: 'Антисептики',
+            value: 'Антисептики'
+        }
+        {
             label: 'БАД',
             value: 'БАД'
         },
