@@ -34,7 +34,7 @@ const DataForItem = {
         {
             label: 'Антисептики',
             value: 'Антисептики'
-        }
+        },
         {
             label: 'БАД',
             value: 'БАД'
