@@ -68,6 +68,10 @@ const DataForItem = {
             value: 'Молочная продукция'
         },
         {
+            label: 'НСП',
+            value: 'НСП'
+        },
+        {
             label: 'Обувь',
             value: 'Обувь'
         },
