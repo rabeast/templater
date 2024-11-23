@@ -25,7 +25,7 @@ const OpeningSummary = ({setAlert}) => {
         openingTitle,
         jiraId,
         systemAdmins,
-        Bissnes,
+        systemBissnes,
         openingDescription,
 
         startDate,
@@ -115,7 +115,7 @@ const OpeningSummary = ({setAlert}) => {
                         <div className='summary__bissnes-title'>Бизнес-аффект:</div>
                         <TextareaAutosize
                             className='summary__area'
-                            value={Bissnes}
+                            value={systemBissnes}
                             name="bissnes"
                             onChange={onWriteInput}
                         /></div>

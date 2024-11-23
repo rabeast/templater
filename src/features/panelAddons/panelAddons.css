@@ -7,7 +7,7 @@
     align-items: center;
     border-radius: 50px;
     padding: 10px;
-    z-index: 999;
+    z-index: 0;
 }
 
 .addon-btn {

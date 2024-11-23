@@ -5,7 +5,7 @@ import {addZero, printTg} from '../../static/helpers/var'
 
 export const useCopyStaff = (staffPerson) => {
     const {qualities, stand, tg, priority, effect} = useSelector(store => selectControlInfo(store).controls)
-    const {isInside, openingTitle, jiraId, startTime, systemAdmins, openingDescription} = useSelector(store => selectOpeningInfo(store).data)
+    const {isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, openingDescription} = useSelector(store => selectOpeningInfo(store).data)
 
     const inside = isInside ? `**ВНУТРЕННИЙ**\n` : ''
     const standOut = stand ? `${stand} ` : ''
@@ -32,6 +32,8 @@ export const useCopyStaff = (staffPerson) => {
         `\nhttps://jira.crpt.ru/browse/OPS-${jiraId}` +
         `\n**Время инцидента:** ${addZero(hourStart)}:${addZero(minutesStart)}` +
         `\n**Кто оповещён:** ${systemAdmins}` +
+        `\n` +
+        `\n**Бизнес-аффект:** ${systemBissnes}` +
         `\n` +
         `\n**Примечание:** ${openingDescription}`
     )

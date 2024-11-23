@@ -64,7 +64,7 @@ const Mi = ({setAlert, start, mi}) => {
                         className='summary__area'
                         value={title}
                         name="miTitle"
-                        placeholder='Title'
+                        placeholder='Тема...'
                         onChange={handleChange}
                     />
                 </form>
