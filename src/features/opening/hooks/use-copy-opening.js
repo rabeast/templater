@@ -1,6 +1,6 @@
 import {printTg, addZero} from '../../../static/helpers/var'
 
-export const useCopyOpening = (qualities, stand, tg, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, openingDescription) => {
+export const useCopyOpening = (qualities, stand, tg, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, openingDescription) => {
     const inside = isInside ? `**ВНУТРЕННИЙ**\n` : ''
     const standOut = stand ? `${stand} ` : ''
     const qualitiesOut = qualities ? `${qualities}` : ''
@@ -21,6 +21,8 @@ export const useCopyOpening = (qualities, stand, tg, priority, effect, isInside,
         `\nhttps://jira.crpt.ru/browse/OPS-${jiraId}` +
         `\n**Время инцидента:** ${addZero(hourStart)}:${addZero(minutesStart)}` +
         `\n**Кто оповещён:** ${systemAdmins}` +
+        `\n` +
+        `\n**Бизнес-аффект:** ${systemBissnes}` +
         `\n` +
         `\n**Примечание:** ${openingDescription}`
     )

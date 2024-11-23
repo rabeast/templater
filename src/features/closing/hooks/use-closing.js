@@ -12,9 +12,9 @@ import {useCopyClosing} from './use-copy-closing'
 export const useClosing = () => {
     const dispatch = useDispatch()
     const {qualities, stand, tg, priority, effect} = useSelector(store => selectControlInfo(store).controls)
-    const {isInside, openingTitle, jiraId, systemAdmins, startTime} = useSelector(store => selectOpeningInfo(store).data)
+    const {isInside, openingTitle, jiraId, systemAdmins, systemBissnes, startTime} = useSelector(store => selectOpeningInfo(store).data)
     const {finishTime, closingDescription, duration} = useSelector(store => selectClosingInfo(store).data)
-    const {copySummary} = useCopyClosing(qualities, stand, tg, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, finishTime, duration, closingDescription)
+    const {copySummary} = useCopyClosing(qualities, stand, tg, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, finishTime, duration, closingDescription)
     const [finishDate, setFinishDate] = useState(new Date())
     const [durationIncident, setDurationIncident] = useState(null)
 
@@ -52,6 +52,7 @@ export const useClosing = () => {
         openingTitle,
         jiraId,
         systemAdmins,
+        systemBissnes,
 
         setFinishDate,
         finishDate,

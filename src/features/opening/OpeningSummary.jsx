@@ -2,6 +2,7 @@ import TextareaAutosize from 'react-textarea-autosize'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import './openingSummary.css'
+import './opening-slice.js'
 
 import {useOpening} from './hooks/use-opening'
 
@@ -24,6 +25,7 @@ const OpeningSummary = ({setAlert}) => {
         openingTitle,
         jiraId,
         systemAdmins,
+        Bissnes,
         openingDescription,
 
         startDate,
@@ -105,6 +107,16 @@ const OpeningSummary = ({setAlert}) => {
                             className='summary__area'
                             value={systemAdmins}
                             name="admins"
+                            onChange={onWriteInput}
+                        /></div>
+
+
+                    <div className='summary__bissnes'>
+                        <div className='summary__bissnes-title'>Бизнес-аффект:</div>
+                        <TextareaAutosize
+                            className='summary__area'
+                            value={Bissnes}
+                            name="bissnes"
                             onChange={onWriteInput}
                         /></div>
 

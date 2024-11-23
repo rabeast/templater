@@ -20,6 +20,7 @@ const ClosingSummary = ({setAlert}) => {
         openingTitle,
         jiraId,
         systemAdmins,
+        systemBissnes,
 
         setFinishDate,
         finishDate,
@@ -63,6 +64,8 @@ const ClosingSummary = ({setAlert}) => {
                     <p>Длительность: <span className='blue-text text-accent-1'>{durationIncident}</span></p>
 
                     <p>Кто оповещен: <span>{systemAdmins}</span></p>
+
+                    <p>Бизнес-аффект: <span>{systemBissnes}</span></p>
 
                     <p>Примечание:</p>
                     <TextareaAutosize

@@ -46,7 +46,7 @@
 }
 
 .summary__body p {
-    margin: 7px 0 !important;
+    margin: 8px 0 !important;
 }
 
 
@@ -142,7 +142,7 @@
     font-size: 18px;
     /*background-color: #78909c !important;*/
     padding: 3px 10px;
-}
+    }
 
 .summary__area:focus {
     color: black;
@@ -157,6 +157,7 @@
 }
 
 .summary__whoIsNotify {
+    position: relative;
     display: flex;
     /*width: 70%;*/
     flex-shrink: 0;
@@ -165,6 +166,21 @@
 .summary__whoIsNotify-title {
     flex-shrink: 0;
     margin-right: 15px;
+}
+
+.summary__bissnes {
+    position: relative;
+    bottom: -5px;
+    display: flex;
+    /*width: 70%;*/
+    flex-shrink: 0;
+}
+
+.summary__bissnes-title {
+    position: relative;
+    bottom: -1px;
+    flex-shrink: 0;
+    margin-right: 10px;
 }
 
 .summary__time {

@@ -7,6 +7,7 @@ const initialState = {
         jiraId: '',
         startTime: null,
         systemAdmins: '',
+        systemBissnes: '',
         openingDescription: '',
     }
 }
@@ -37,13 +38,17 @@ const openingSlice = createSlice({
             state.data.systemAdmins = action.payload
         },
 
+        setBissnes: (state, action) => {
+            state.data.systemBissnes = action.payload
+        },
+
         setOpeningDescription: (state, action) => {
             state.data.openingDescription = action.payload
         },
     }
 })
 
-export const {resetOpening, setInside, setTitle, setJiraId, setStartTime, setAdmins, setOpeningDescription} = openingSlice.actions
+export const {resetOpening, setInside, setTitle, setJiraId, setStartTime, setAdmins, setBissnes, setOpeningDescription} = openingSlice.actions
 export const openingReducer = openingSlice.reducer
 
 //selectors

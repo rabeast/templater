@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {selectControlInfo} from '../../control/control-slice'
-import {selectOpeningInfo, setInside, setTitle, setJiraId, setStartTime, setAdmins, setOpeningDescription} from '../opening-slice'
+import {selectOpeningInfo, setInside, setTitle, setJiraId, setStartTime, setAdmins, setBissnes, setOpeningDescription} from '../opening-slice'
 
 import {sortTg} from '../../../static/helpers/var'
 import {useCopyOpening} from './use-copy-opening'
@@ -10,8 +10,8 @@ import {useCopyBot} from './use-copy-bot'
 export const useOpening = () => {
     const dispatch = useDispatch()
     const {qualities, stand, tg, priority, effect} = useSelector(store => selectControlInfo(store).controls)
-    const {isInside, openingTitle, jiraId, startTime, systemAdmins, openingDescription} = useSelector(store => selectOpeningInfo(store).data)
-    const {copySummary} = useCopyOpening(qualities, stand, tg, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, openingDescription)
+    const {isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, openingDescription} = useSelector(store => selectOpeningInfo(store).data)
+    const {copySummary} = useCopyOpening(qualities, stand, tg, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, openingDescription)
     const {copyBot} = useCopyBot(stand, openingTitle, startTime, openingDescription)
     const [startDate, setStartDate] = useState(new Date())
     const [isWarning, setWarning] = useState(false)
@@ -36,6 +36,7 @@ export const useOpening = () => {
         }
 
         if (name === 'admins') dispatch(setAdmins(value))
+        if (name === 'bissnes') dispatch(setBissnes(value))
         if (name === 'description') dispatch(setOpeningDescription(value))
     }
 
@@ -61,6 +62,7 @@ export const useOpening = () => {
         openingTitle,
         jiraId,
         systemAdmins,
+        systemBissnes,
         openingDescription,
 
         startDate,
