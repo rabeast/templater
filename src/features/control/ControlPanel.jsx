@@ -5,7 +5,7 @@ import DataForItem from "../../static/data/dataForItem"
 import {useControlPanel} from './use-control-panel'
 
 const ControlPanel = () => {
-    const {setStand, setQualities, setSelectTG, setSelectPriority, setSelectEffect} = useControlPanel()
+    const {setStand, setQualities, setSelectTG, setSelectPriority, setSelectEffect, setSelectStatus} = useControlPanel()
 
     return(
         <div id='control' className="control-panel">
@@ -73,6 +73,19 @@ const ControlPanel = () => {
                     onChange={setSelectEffect}
                     options={DataForItem.effect}
                     placeholder='Влияние'
+                />
+            </div>
+
+            <div className="control-panel__select">
+                <label htmlFor='status' className='control-panel__label'>Статус</label>
+
+                <Select
+                    isClearable
+                    name='status'
+                    className='select-react'
+                    onChange={setSelectStatus}
+                    options={DataForItem.status}
+                    placeholder='Статус'
                 />
             </div>
         </div>

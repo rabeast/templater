@@ -78,11 +78,11 @@ const OpeningSummary = ({setAlert}) => {
                     <p>Степень влияния: <span>{effect}</span></p>
 
                     <div className="summary__ops">
-                        <p className={isWarning ? 'red lighten-1' : null}>JIRA/OPS-</p>
+                        <p className={isWarning ? '#78909c lighten-1' : null}>JIRA/OPS-</p>
                         <input
                             value={jiraId}
                             name='ops'
-                            className={isPrimary ? 'form__input summary__ops-input summary__ops-input-colors' : 'form__input orange darken-1 summary__ops-input'}
+                            className={isPrimary ? 'form__input summary__ops-input summary__ops-input-colors' : 'form__input #78909c darken-1 summary__ops-input'}
                             placeholder='000000'
                             type="text"
                             onChange={onWriteInput}

@@ -4,17 +4,18 @@ import TextareaAutosize from "react-textarea-autosize"
 import {useUpdate} from './hooks/use-update'
 
 const UpdateSummary = ({setAlert}) => {
-    const {copySummary, updateDescription, isInside, stand, qualities, onWriteInputUpdate} = useUpdate()
+    const {copySummary, updateDescription, isInside, stand, qualities, status, onWriteInputUpdate} = useUpdate()
 
     return(
         <div className="card blue-grey darken-1">
             <div className="card-content white-text summary-head">
                 <div className="summary__checkbox-content">
+                    {/* <span className="card-title">Апдейт</span> */}
                     <span className={isInside ? 'card-title' : 'hide'}>ВНУТРЕННИЙ</span>
-                    <span className="card-title">Инцидент в работе</span>
+                    <span className="card-title"><span>{status}</span></span>
                 </div>
 
-                <span className="card-title"><span>{stand}</span> <span>{qualities}</span></span>
+                <span className="card-title"><span>{stand}</span> <span>{qualities}</span> </span>
             </div>
 
             <div className="card-action card-update">

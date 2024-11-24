@@ -11,6 +11,7 @@ body {
 
 #nums_1 {padding:100px}
 
+/* Ширина темно-зеленых блоков */
 .content {
   padding: 1.5rem 0;
   width: 100% !important;
@@ -27,6 +28,7 @@ body {
 
 .pt0 {
   padding-top: 0 !important;
+  margin: 10px !important;
 }
 
 .colorAqua {
@@ -89,6 +91,7 @@ body {
   border-radius: 3px;
 }
 
+/* Кнопки копирования, расположение */
 .txt-out__card-footer {
   display: flex;
   justify-content: space-around;
@@ -112,11 +115,12 @@ body {
   color: black;
   background-color: white !important;
   padding: 3px 10px;
+  
 }
 
-/* .txt-out__card:focus {
+ /* .txt-out__card:focus {
   background-color: #e1f5fe !important;
-} */
+}  */
 
 .txt-out__helper .txt-out__card {
   max-width: 100% !important;
@@ -134,11 +138,13 @@ body {
   background-color: #26a69a !important;font-weight: bold !important;
 }
 
+/* Ширина блоков темно-зеленых */
 .card {
   margin: 0 !important;
   transition: all .25s !important;
 }
 
+/* Двигает FYI c пином */
 .card-title {
   margin-bottom: 0 !important;
 }

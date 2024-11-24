@@ -197,6 +197,17 @@ const DataForItem = {
             value: 'ДЕМО + ПРОД'
         },
     ],
+
+    status: [
+        {
+            label: 'Инцидент в работе',
+            value: 'Инцидент в работе'
+        },
+        {
+            label: 'ПОСТМОНИТОРИНГ',
+            value: 'ПОСТМОНИТОРИНГ'
+        },
+    ],
 };
 
 export default DataForItem;

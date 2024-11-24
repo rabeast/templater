@@ -10,6 +10,7 @@
     z-index: 0;
 }
 
+/* Кнопка переключения MI и FYI */
 .addon-btn {
     display: flex;
     justify-content: center;
@@ -29,11 +30,11 @@
 }
 
 .staff-btn {
-    color: #8F1C13;
-    background-color: #ED6A5E;
+    color: #386863;
+    background-color: #69c2b9;
 }
 
 .mi-btn {
-    color: #A87329;;
-    background-color: #F5BF4F;
+    color: #386863;;
+    background-color: #69c2b9;
 }

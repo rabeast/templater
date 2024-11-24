@@ -1,11 +1,11 @@
-export const useCopyUpdate = (stand, qualities, isInside, updateDescription) => {
+export const useCopyUpdate = (stand, qualities, isInside, updateDescription, status) => {
     const inside = isInside ? `**ВНУТРЕННИЙ**\n` : ''
     const standOut = stand ? `${stand}` : ''
     const qualitiesOut = qualities ? ` ${qualities}` : ''
 
     const str = (
         `${inside}` +
-        `**Инцидент в работе**` +
+        `**${status}**` +
         `\n**${standOut}${qualitiesOut}**` +
         `\n` +
         `\n${updateDescription}`
