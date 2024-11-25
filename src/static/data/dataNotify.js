@@ -1,7 +1,7 @@
 export const staffPerson = [
     /*{ name: 'markov', fullName: 'Василий М.', userName: '@haltandcatch', selected: true, },*/
     { name: 'meshkov', fullName: 'Александр Мешков', userName: '@okmeshkov', selected: true, },
-    { name: 'zalygin', fullName: 'Михаил Залыгин', userName: '@mishanyazal', selected: true, },
+    { name: 'zalygin', fullName: 'Михаил Залыгин', userName: '@mishanyazal', selected: false, },
     /*{ name: 'balamutin', fullName: 'Анатолий Баламутин', userName: '@dezm0d', selected: true, },*/
     { name: 'grigoriev', fullName: 'Владимир Григорьев', userName: '@Lorenzo_Ruiz', selected: true, },
     { name: 'katukhov', fullName: 'Илья Катухов', userName: '@ikatukhov', selected: true, },
