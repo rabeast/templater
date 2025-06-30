@@ -1,12 +1,14 @@
+const isEvenDay = new Date().getDate() % 2 === 0;
+
 export const staffPerson = [
     /*{ name: 'markov', fullName: 'Василий М.', userName: '@haltandcatch', selected: true, },*/
     { name: 'meshkov', fullName: 'Александр Мешков', userName: '@okmeshkov', selected: true, },
-    { name: 'zalygin', fullName: 'Михаил Залыгин', userName: '@mishanyazal', selected: true, },
+    { name: 'zalygin', fullName: 'Михаил Залыгин', userName: '@mishanyazal', selected: false, },
     /*{ name: 'balamutin', fullName: 'Анатолий Баламутин', userName: '@dezm0d', selected: true, },*/
     { name: 'grigoriev', fullName: 'Владимир Григорьев', userName: '@Lorenzo_Ruiz', selected: true, },
-    { name: 'katukhov', fullName: 'Илья Катухов', userName: '@ikatukhov', selected: true, },
+    { name: 'katukhov', fullName: 'Илья Катухов', userName: '@ikatukhov', selected: isEvenDay, },
     // { name: 'suprun', fullName: 'Иван Супрун', userName: '@lacronn', selected: true, },
-    { name: 'vorobiev', fullName: 'Павел Воробьёв', userName: '@crpt_vorobiev', selected: true, },
+    { name: 'vorobiev', fullName: 'Павел Воробьёв', userName: '@crpt_vorobiev', selected: !isEvenDay, },
 ]
 
 export const dataNotify = {
@@ -89,7 +91,7 @@ export const dataNotify = {
         },
         {
             alwaysSelected: false,
-            selected: true,
+            selected: isEvenDay,
             even: true,
             name: 'katukhov',
             fullName: 'Илья Катухов',
@@ -105,7 +107,7 @@ export const dataNotify = {
         },*/
         {
             alwaysSelected: false,
-            selected: true,
+            selected: isEvenDay,
             even: false,
             name: 'vorobiev',
             fullName: 'Павел Воробьёв',

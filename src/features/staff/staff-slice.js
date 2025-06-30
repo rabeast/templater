@@ -27,7 +27,7 @@ const staffSlice = createSlice({
     }
 })
 
-export const {changeSelect} = staffSlice.actions
+export const {changeSelect, resetStaff} = staffSlice.actions
 export const staffReducer = staffSlice.reducer
 
 //selectors
