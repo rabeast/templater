@@ -5,8 +5,8 @@ const Footer = () => (
         <div className="footer-left">
             <div>Чётные дни: Илья Катухов</div>
             {/* <div>Чётные дни: Павел Воробьёв</div> */}
-            {/* <div>Нечётные дни: Иван Супрун</div> */}
-            <div>Нечётные дни: Павел Воробьёв</div>
+            <div>Нечётные дни: Иван Супрун</div>
+            {/*<div>Нечётные дни: Павел Воробьёв</div>*/}
         </div>
 
         <div>DUTY © {new Date().getFullYear()}</div>
