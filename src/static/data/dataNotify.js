@@ -6,9 +6,9 @@ export const staffPerson = [
     { name: 'zalygin', fullName: 'Михаил Залыгин', userName: '@mishanyazal', selected: true, },
     /*{ name: 'balamutin', fullName: 'Анатолий Баламутин', userName: '@dezm0d', selected: true, },*/
     { name: 'grigoriev', fullName: 'Владимир Григорьев', userName: '@Lorenzo_Ruiz', selected: true, },
-    { name: 'katukhov', fullName: 'Илья Катухов', userName: '@ikatukhov', selected: isEvenDay, },
+    // { name: 'katukhov', fullName: 'Илья Катухов', userName: '@ikatukhov', selected: isEvenDay, },
     { name: 'suprun', fullName: 'Иван Супрун', userName: '@lacronn', selected: !isEvenDay, },
-    // { name: 'vorobiev', fullName: 'Павел Воробьёв', userName: '@crpt_vorobiev', selected: !isEvenDay, },
+    { name: 'vorobiev', fullName: 'Павел Воробьёв', userName: '@crpt_vorobiev', selected: isEvenDay, },
 ]
 
 export const dataNotify = {
@@ -48,14 +48,14 @@ export const dataNotify = {
             fullName: 'Владимир Григорьев',
             userName: '@Lorenzo_Ruiz'
         },
-        {
+        /*{
             alwaysSelected: false,
             selected: false,
             even: true,
             name: 'katukhov',
             fullName: 'Илья Катухов',
             userName: '@ikatukhov'
-        },
+        },*/
         {
             alwaysSelected: false,
             selected: false,
@@ -64,14 +64,14 @@ export const dataNotify = {
             fullName: 'Иван Супрун',
             userName: '@lacronn'
         },
-       /*{
+       {
             alwaysSelected: false,
             selected: false,
             even: false,
             name: 'vorobiev',
             fullName: 'Павел Воробьёв',
             userName: '@crpt_vorobiev'
-        },*/
+        },
     ],
 
     notifyStaff: [
@@ -89,14 +89,14 @@ export const dataNotify = {
             fullName: 'Владимир Григорьев',
             userName: '@Lorenzo_Ruiz',
         },
-        {
+        /*{
             alwaysSelected: false,
             selected: isEvenDay,
             even: true,
             name: 'katukhov',
             fullName: 'Илья Катухов',
             userName: '@ikatukhov'
-        },
+        },*/
         {
             alwaysSelected: false,
             selected: isEvenDay,
@@ -105,13 +105,13 @@ export const dataNotify = {
             fullName: 'Иван Супрун',
             userName: '@lacronn'
         },
-        /*{
+        {
             alwaysSelected: false,
             selected: isEvenDay,
             even: false,
             name: 'vorobiev',
             fullName: 'Павел Воробьёв',
             userName: '@crpt_vorobiev'
-        },*/
+        },
     ],
 }
