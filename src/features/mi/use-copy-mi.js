@@ -1,4 +1,4 @@
-import {printTg} from '../../static/helpers/var'
+import {printTg} from '../../helpers/var'
 
 export const useCopyMi = ({stand, tg, priority, support, dev, miNumber, title, toGo, toDev, calls}) => {
     const standOut = stand ? `${stand} ` : ''

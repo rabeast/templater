@@ -14,6 +14,7 @@ const ClosingSummary = ({setAlert}) => {
         qualities,
         tg,
         priority,
+        sysselect,
         effect,
 
         isInside,
@@ -34,7 +35,7 @@ const ClosingSummary = ({setAlert}) => {
 
                 <div className="summary__checkbox-content">
                     <span className={isInside ? 'card-title' : 'hide'}>{isInside ? 'ВНУТРЕННИЙ' : null}</span>
-                    <span className="card-title">Инцидент ЗАКРЫТ</span>
+                    <span className="card-title">CLOSED</span>
                 </div>
 
                 <span className="card-title"><span>{stand}</span> <span>{qualities}</span></span>
@@ -44,11 +45,11 @@ const ClosingSummary = ({setAlert}) => {
                 <div className="summary__body summary__body-closing">
                     <p>{openingTitle}</p>
 
-                    <p>ТГ: <span>{tg}</span></p>
-
                     <p>Приоритет: <span>{priority}</span></p>
-                    <p>Степень влияния: <span>{effect}</span></p>
-                    <p>JIRA/OPS-{jiraId}</p>
+                    <p>Система: <span>{sysselect}</span></p>
+                    <p>ТГ: <span>{tg}</span></p>
+                    {/*<p>Степень влияния: <span>{effect}</span></p>*/}
+                    <p>OPS-{jiraId}</p>
 
                     <div className='summary__time m0'>
                         <div className='summary__time-title'>Окончание инцидента:</div>

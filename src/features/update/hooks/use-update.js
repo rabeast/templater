@@ -10,7 +10,7 @@ export const useUpdate = () => {
     const {isInside} = useSelector(store => selectOpeningInfo(store).data)
     const {updateDescription} = useSelector(store => selectUpdateInfo(store).data)
     
-    const status = rawStatus || 'Инцидент в работе';
+    const status = rawStatus || 'UPD';
 
     const {copySummary} = useCopyUpdate(stand, qualities, isInside, updateDescription, status)
     
@@ -18,5 +18,5 @@ export const useUpdate = () => {
         dispatch(setUpdateDescription(e.target.value))
     }
 
-    return {copySummary, updateDescription, isInside, stand, qualities, status, onWriteInputUpdate}
+    return {copySummary, updateDescription, isInside, /*stand,*/ qualities, status, onWriteInputUpdate}
 }

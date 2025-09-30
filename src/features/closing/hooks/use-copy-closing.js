@@ -1,6 +1,6 @@
-import {printTg, printDay, addZero} from '../../../static/helpers/var'
+import {printTg, printDay, addZero} from '../../../helpers/var'
 
-export const useCopyClosing = (qualities, stand, tg, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, finishTime, duration, closingDescription) => {
+export const useCopyClosing = (qualities, stand, tg, sysselect, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, finishTime, duration, closingDescription) => {
     const inside = isInside ? `**ВНУТРЕННИЙ**\n` : ''
     const standOut = stand ? `${stand} ` : ''
     const qualitiesOut = qualities ? `${qualities}` : ''
@@ -22,6 +22,7 @@ export const useCopyClosing = (qualities, stand, tg, priority, effect, isInside,
         `\n**ТГ:** ${printTgTxt}` +
         `\n` +
         `\n**Приоритет:** ${priority}` +
+        `\n**Система:** ${sysselect}` +
         `\n**Степень влияния:** ${effect}` +
         `\nhttps://jira.crpt.ru/browse/OPS-${jiraId}` +
         `\n**Время инцидента:** ${outTime.trim()} (${duration})` +

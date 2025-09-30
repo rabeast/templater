@@ -5,16 +5,16 @@ import {selectControlInfo} from '../../control/control-slice'
 import {selectOpeningInfo} from '../../opening/opening-slice'
 import {setFinishTime, setDuration, setClosingDescription, selectClosingInfo} from '../closing-slice'
 
-import {sortTg} from '../../../static/helpers/var'
-import {timeDuration} from '../../../static/helpers/timeDuration'
+import {sortTg} from '../../../helpers/var'
+import {timeDuration} from '../../../helpers/timeDuration'
 import {useCopyClosing} from './use-copy-closing'
 
 export const useClosing = () => {
     const dispatch = useDispatch()
-    const {qualities, stand, tg, priority, effect} = useSelector(store => selectControlInfo(store).controls)
+    const {qualities, stand, tg, sysselect, priority, effect} = useSelector(store => selectControlInfo(store).controls)
     const {isInside, openingTitle, jiraId, systemAdmins, systemBissnes, startTime} = useSelector(store => selectOpeningInfo(store).data)
     const {finishTime, closingDescription, duration} = useSelector(store => selectClosingInfo(store).data)
-    const {copySummary} = useCopyClosing(qualities, stand, tg, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, finishTime, duration, closingDescription)
+    const {copySummary} = useCopyClosing(qualities, stand, tg, sysselect, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, finishTime, duration, closingDescription)
     const [finishDate, setFinishDate] = useState(new Date())
     const [durationIncident, setDurationIncident] = useState(null)
 
@@ -46,6 +46,7 @@ export const useClosing = () => {
         qualities,
         tg: sortTg(tg),
         priority,
+        sysselect,
         effect,
 
         isInside,

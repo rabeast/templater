@@ -1,5 +1,5 @@
-import {addZero} from '../../../static/helpers/var'
-import {getDaysToPrint} from '../../../static/helpers/getDaysToPrint'
+import {addZero} from '../../../helpers/var'
+import {getDaysToPrint} from '../../../helpers/getDaysToPrint'
 
 export const useCopyBot = (stand, openingTitle, startTime, openingDescription) => {
     const standOut = stand ? `${stand}` : ''
@@ -12,7 +12,7 @@ export const useCopyBot = (stand, openingTitle, startTime, openingDescription) =
         `\nТема - ${openingTitle}` +
         `\nКонтур - ${standOut}` +
         `\nВремя начала инцидента - ${dateOut}, ${addZero(hourStart)}:${addZero(minutesStart)}` +
-        `\nОписание - ${openingDescription}`
+        `\nОписание - Ведется анализ`
     )
 
     const copyBot = () => {

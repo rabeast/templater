@@ -1,7 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = {
-    controls: { stand: null,  qualities: null, tg: null, priority: null, effect: null, status: null }
+    controls: { stand: null,  qualities: null, sysselect: null, tg: null, priority: null, effect: null, status: null }
 }
 
 const controlSlice = createSlice({

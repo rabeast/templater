@@ -7,6 +7,7 @@ export const useControlPanel = () => {
 
     const [isStand, setStand] = useState(null);
     const [isQualities, setQualities] = useState(null);
+    const [isSelectSysSelect, setSelectSysSelect] = useState(null);
     const [isSelectTG, setSelectTG] = useState(null);
     const [isSelectPriority, setSelectPriority] = useState(null);
     const [isSelectEffect, setSelectEffect] = useState(null);
@@ -19,12 +20,13 @@ export const useControlPanel = () => {
                 stand: isStand && isStand.value,
                 qualities: isQualities && isQualities.value,
                 tg: isSelectTG && isSelectTG,
+                sysselect: isSelectSysSelect && isSelectSysSelect.value,
                 priority: isSelectPriority && isSelectPriority.value,
                 effect: isSelectEffect && isSelectEffect.value,
                 status: isSelectStatus && isSelectStatus.value,
             }
         ))
-    }, [isQualities, isStand, isSelectTG, isSelectPriority, isSelectEffect, isSelectStatus, dispatch])
+    }, [isQualities, isStand, isSelectTG, isSelectSysSelect, isSelectPriority, isSelectEffect, isSelectStatus, dispatch])
 
-    return {setStand, setQualities, setSelectTG, setSelectPriority, setSelectEffect, setSelectStatus}
+    return {setStand, setQualities, setSelectTG, setSelectSysSelect, setSelectPriority, setSelectEffect, setSelectStatus}
 }

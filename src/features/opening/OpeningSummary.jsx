@@ -2,29 +2,32 @@ import TextareaAutosize from 'react-textarea-autosize'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import './openingSummary.css'
-import './opening-slice.js'
-
+import TelegramButton from '../../components/TelegramButton' // ← Добавлен импорт
 import {useOpening} from './hooks/use-opening'
 
 const OpeningSummary = ({setAlert}) => {
     const {
         copySummary,
+        copyOldFormat,
         copyBot,
-        handelInside,
+        handleSendToTelegram, // ← Добавлено
+        //handelInside,
         onWriteInput,
 
         isPrimary,
+        isSending, // ← Добавлено
 
         stand,
         qualities,
         tg,
         priority,
+        sysselect,
         effect,
 
         isInside,
         openingTitle,
         jiraId,
-        systemAdmins,
+        //systemAdmins,
         systemBissnes,
         openingDescription,
 
@@ -35,6 +38,17 @@ const OpeningSummary = ({setAlert}) => {
         setWarning,
     } = useOpening()
 
+    const handleTelegramSend = async () => {
+    console.log('🖱️ Кнопка Telegram нажата!')
+    const result = await handleSendToTelegram()
+    if (result && result.success) {
+        console.log('🎉 Успех! Показываем уведомление...')
+        setAlert(true)
+    } else {
+        console.error('💥 Ошибка отправки:', result.error)
+    }
+}
+
     return(
         <div className="card blue-grey darken-1">
             <div className="card-content white-text summary-head">
@@ -42,19 +56,8 @@ const OpeningSummary = ({setAlert}) => {
                 <div className={isInside ? 'summary__checkBox summary__checkBox-topCheckBox' : 'summary__checkBox'}>
                     <div className="summary__checkbox-content">
                         <span className={isInside ? 'card-title amber-text text-lighten-3' : 'hide'}>{isInside ? 'ВНУТРЕННИЙ' : null}</span>
-                        <span className="card-title">Инцидент ОТКРЫТ</span>
+                        <span className="card-title">NEW</span>
                     </div>
-
-                    <label className={isInside ? 'summary__chooseInsideLabel mt-7' : 'summary__chooseInsideLabel'}>
-                        <input
-                            type="checkbox"
-                            name='inside'
-                            className="filled-in summary__chooseInside"
-                            checked={isInside}
-                            onChange={handelInside}
-                        />
-                        <span>Внутренний</span>
-                    </label>
                 </div>
 
                 <span className="card-title"><span className='red-text text-lighten-3 colorCoral'>{stand}</span> <span className='colorAqua'>{qualities}</span></span>
@@ -72,13 +75,25 @@ const OpeningSummary = ({setAlert}) => {
                         onChange={onWriteInput}
                     />
 
+                    <p>Приоритет: <span>{priority}</span></p>
+                    <p>Система: <span>{sysselect}</span></p>
+                     <div className='summary__time'>
+                        <div className='summary__time-title bot'>Начало инцидента:</div>
+                        <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            showTimeSelect
+                            dateFormat="dd.MM.yyyy HH:mm"
+                            timeFormat={"HH:mm"}
+                        />
+                    </div>
+
+                    <p>ЗО: <span>{effect}</span></p>
+
                     <p>ТГ: <span>{tg}</span></p>
 
-                    <p>Приоритет: <span>{priority}</span></p>
-                    <p>Степень влияния: <span>{effect}</span></p>
-
                     <div className="summary__ops">
-                        <p className={isWarning ? '#78909c lighten-1' : null}>JIRA/OPS-</p>
+                        <p className={isWarning ? '#78909c lighten-1' : null}>OPS-</p>
                         <input
                             value={jiraId}
                             name='ops'
@@ -90,27 +105,8 @@ const OpeningSummary = ({setAlert}) => {
                         />
                     </div>
 
-                    <div className='summary__time'>
-                        <div className='summary__time-title bot'>Начало инцидента:</div>
-                        <DatePicker
-                            selected={startDate}
-                            onChange={(date) => setStartDate(date)}
-                            showTimeSelect
-                            dateFormat="dd.MM.yyyy HH:mm"
-                            timeFormat={"HH:mm"}
-                        />
-                    </div>
-
-                    <div className='summary__whoIsNotify'>
-                        <div className='summary__whoIsNotify-title'>Кто оповещён:</div>
-                        <TextareaAutosize
-                            className='summary__area'
-                            value={systemAdmins}
-                            name="admins"
-                            onChange={onWriteInput}
-                        /></div>
-
-
+                   
+                    
                     <div className='summary__bissnes'>
                         <div className='summary__bissnes-title'>Бизнес-аффект:</div>
                         <TextareaAutosize
@@ -118,7 +114,8 @@ const OpeningSummary = ({setAlert}) => {
                             value={systemBissnes}
                             name="bissnes"
                             onChange={onWriteInput}
-                        /></div>
+                        />
+                    </div>
 
                     <p className='bot'>Примечание:</p>
 
@@ -136,7 +133,7 @@ const OpeningSummary = ({setAlert}) => {
                 <button
                     className="btn-floating waves-effect waves-light main__action-btn-green mr15"
                     onClick={() => {
-                        setAlert(true)
+                        setAlert('bot-copy')
                         copyBot()
                     }}
                 >
@@ -144,18 +141,22 @@ const OpeningSummary = ({setAlert}) => {
                 </button>
 
                 <button
-                    className="btn-floating waves-effect waves-light main__action-btn-green"
+                    className="btn-floating waves-effect waves-light main__action-btn-green mr15"
                     onClick={() => {
-                        setAlert(true)
+                        setAlert('summary-copy')
                         copySummary()
                     }}
                 >
                     <i className="material-icons">content_copy</i>
                 </button>
+
+                <TelegramButton
+                    onClick={handleTelegramSend}
+                    isLoading={isSending}
+                />
             </div>
         </div>
     )
-
 }
 
 export default OpeningSummary

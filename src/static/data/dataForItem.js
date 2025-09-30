@@ -10,6 +10,25 @@ const DataForItem = {
         },
     ],
 
+    sysselect: [
+        {
+            label: 'ГИС МТ',
+            value: 'ГИС МТ'
+        },
+        {
+            label: 'МДЛП',
+            value: 'МДЛП'
+        },
+         {
+            label: 'СУЗ',
+            value: 'СУЗ'
+        },
+        {
+            label: 'ИШ',
+            value: 'ИШ'
+        },
+    ],
+    
     tg: [
         {
             label: 'Все ТГ',
@@ -175,21 +194,21 @@ const DataForItem = {
     effect: [
 
         {
-            label: 'Массовое',
-            value: 'Массовое'
+            label: 'Вне ЗО ЦРПТ',
+            value: 'Вне ЗО ЦРПТ'
         },
         {
-            label: 'Одиночное',
-            value: 'Одиночное',
+            label: 'ЗО ЦРПТ',
+            value: 'ЗО ЦРПТ',
         },
-        {
+        /*{
             label: 'Групповое',
             value: 'Групповое',
         },
         {
             label: 'Без влияния',
             value: 'Без влияния'
-        },
+        },*/
     ],
 
     qualities: [
@@ -224,17 +243,17 @@ const DataForItem = {
 
     status: [
         {
-            label: 'Инцидент в работе',
-            value: 'Инцидент в работе'
+            label: 'UPD',
+            value: 'UPD'
         },
-        {
+       /* {
             label: 'ПОСТМОНИТОРИНГ',
             value: 'ПОСТМОНИТОРИНГ'
         },
         {
             label: 'Инцидент ПЕРЕОТКРЫТ',
             value: 'Инцидент ПЕРЕОТКРЫТ'
-        },
+        },*/
     ],
 };
 

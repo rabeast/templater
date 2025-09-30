@@ -5,7 +5,7 @@ import DataForItem from "../../static/data/dataForItem"
 import {useControlPanel} from './use-control-panel'
 
 const ControlPanel = () => {
-    const {setStand, setQualities, setSelectTG, setSelectPriority, setSelectEffect, setSelectStatus} = useControlPanel()
+    const {setStand, setQualities, setSelectSysSelect, setSelectTG, setSelectPriority, setSelectEffect, setSelectStatus} = useControlPanel()
 
     return(
         <div id='control' className="control-panel">
@@ -23,7 +23,7 @@ const ControlPanel = () => {
                 />
             </div>
 
-            <div className="control-panel__select">
+            {/*<div className="control-panel__select">
                 <label htmlFor='country' className='control-panel__label'>ЕАЭС</label>
 
                 <Select
@@ -35,21 +35,9 @@ const ControlPanel = () => {
                     placeholder='ЕАЭС'
                     noOptionsMessage={() => 'Не найдено'}
                 />
-            </div>
+            </div>*/}
 
-            <div className="control-panel__select">
-                <label htmlFor='tg' className='control-panel__label' > ТГ</label>
-
-                <Select
-                    isMulti
-                    className='select-react'
-                    onChange={setSelectTG}
-                    options={DataForItem.tg}
-                    placeholder='Выбрать ТГ'
-                    noOptionsMessage={() => 'ТГ не найдена'}
-                />
-            </div>
-
+            
             <div className="control-panel__select">
                 <label htmlFor='priority' className='control-panel__label'>Приоритет</label>
 
@@ -63,8 +51,36 @@ const ControlPanel = () => {
                 />
             </div>
 
+                <div className="control-panel__select">
+                <label htmlFor='sysselect' className='control-panel__label'>Система</label>
+
+                <Select
+                    isClearable
+                    name='sysselect'
+                    className='select-react'
+                    onChange={setSelectSysSelect}
+                    options={DataForItem.sysselect}
+                    placeholder='Система'
+                    noOptionsMessage={() => 'Не найдено'}
+                />
+            </div>
+
             <div className="control-panel__select">
-                <label htmlFor='effect' className='control-panel__label'>Влияние</label>
+                <label htmlFor='tg' className='control-panel__label' > Товарная группа</label>
+
+                <Select
+                    isMulti
+                    className='select-react'
+                    onChange={setSelectTG}
+                    options={DataForItem.tg}
+                    placeholder='Выбрать ТГ'
+                    noOptionsMessage={() => 'ТГ не найдена'}
+                />
+            </div>
+
+
+            <div className="control-panel__select">
+                <label htmlFor='effect' className='control-panel__label'>ЗО</label>
 
                 <Select
                     isClearable
@@ -72,11 +88,11 @@ const ControlPanel = () => {
                     className='select-react'
                     onChange={setSelectEffect}
                     options={DataForItem.effect}
-                    placeholder='Влияние'
+                    placeholder='ЗО'
                 />
             </div>
 
-            <div className="control-panel__select">
+            {/*<div className="control-panel__select">
                 <label htmlFor='status' className='control-panel__label'>Статус</label>
 
                 <Select
@@ -87,7 +103,7 @@ const ControlPanel = () => {
                     options={DataForItem.status}
                     placeholder='Статус'
                 />
-            </div>
+            </div>*/}
         </div>
     )
 };
