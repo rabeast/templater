@@ -38,7 +38,7 @@ const ClosingSummary = ({setAlert}) => {
                     <span className="card-title">CLOSED</span>
                 </div>
 
-                <span className="card-title"><span>{stand}</span> <span>{qualities}</span></span>
+               {/*<span className="card-title"><span>{stand}</span> <span>{qualities}</span></span>*/}
             </div>
 
             <div className="card-action">
@@ -47,10 +47,6 @@ const ClosingSummary = ({setAlert}) => {
 
                     <p>Приоритет: <span>{priority}</span></p>
                     <p>Система: <span>{sysselect}</span></p>
-                    <p>ТГ: <span>{tg}</span></p>
-                    {/*<p>Степень влияния: <span>{effect}</span></p>*/}
-                    <p>OPS-{jiraId}</p>
-
                     <div className='summary__time m0'>
                         <div className='summary__time-title'>Окончание инцидента:</div>
                         <DatePicker
@@ -63,8 +59,14 @@ const ClosingSummary = ({setAlert}) => {
                     </div>
 
                     <p>Длительность: <span className='blue-text text-accent-1'>{durationIncident}</span></p>
+                    <p>ЗО: <span>{effect}</span></p>
+                    <p>ТГ: <span>{tg}</span></p>
+                    {/*<p>Степень влияния: <span>{effect}</span></p>*/}
+                    <p>OPS-{jiraId}</p>
 
-                    <p>Кто оповещен: <span>{systemAdmins}</span></p>
+                    
+
+                   {/*<p>Кто оповещен: <span>{systemAdmins}</span></p>*/}
 
                     <p>Бизнес-аффект: <span>{systemBissnes}</span></p>
 

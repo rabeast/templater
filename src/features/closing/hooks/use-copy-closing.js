@@ -15,21 +15,24 @@ export const useCopyClosing = (qualities, stand, tg, sysselect, priority, effect
 
     const str = (
         `${inside}` +
-        `**Инцидент ЗАКРЫТ**` +
-        `\n**${standOut}${qualitiesOut}**` +
+        `**CLOSED**` +
+        //`\n**${standOut}${qualitiesOut}**` +
         `\n` +
         `\n**${openingTitle}**` +
-        `\n**ТГ:** ${printTgTxt}` +
         `\n` +
-        `\n**Приоритет:** ${priority}` +
-        `\n**Система:** ${sysselect}` +
-        `\n**Степень влияния:** ${effect}` +
+        `\n${priority}` +
+        `\n${sysselect}` +
+        `\n${outTime.trim()} (${duration})` +
+        `\n${effect}` +
+        `\n${printTgTxt}` +
         `\nhttps://jira.crpt.ru/browse/OPS-${jiraId}` +
-        `\n**Время инцидента:** ${outTime.trim()} (${duration})` +
-        `\n**Кто оповещён:** ${systemAdmins}` +
+        `\n` +
+        //`\n**Степень влияния:** ${effect}` +
+        //`\n**Кто оповещён:** ${systemAdmins}` +
         `\n` +
         `\n**Бизнес-аффект:** ${systemBissnes}` +
         `\n` +
+        `\n**${hourStart}:${minutesStart}**` +
         `\n**Примечание:** ${closingDescription}`
     )
 
