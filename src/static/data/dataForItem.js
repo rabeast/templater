@@ -12,20 +12,92 @@ const DataForItem = {
 
     sysselect: [
         {
-            label: 'ГИС МТ',
-            value: 'ГИС МТ'
+        "label": "АП",
+        "value": "АП"
         },
         {
-            label: 'МДЛП',
-            value: 'МДЛП'
-        },
-         {
-            label: 'СУЗ',
-            value: 'СУЗ'
+        "label": "ЕГАИС",
+        "value": "ЕГАИС"
         },
         {
-            label: 'ИШ',
-            value: 'ИШ'
+        "label": "ГИС МТ",
+        "value": "ГИС МТ"
+        },
+        {
+        "label": "ИБ",
+        "value": "ИБ"
+        },
+        {
+        "label": "ИШ",
+        "value": "ИШ"
+        },
+        {
+        "label": "МДЛП",
+        "value": "МДЛП"
+        },
+        {
+        "label": "Мониторинг",
+        "value": "Мониторинг"
+        },
+        {
+        "label": "МП ЧЗ",
+        "value": "МП ЧЗ"
+        },
+        {
+        "label": "НК",
+        "value": "НК"
+        },
+        {
+        "label": "РБ",
+        "value": "РБ"
+        },
+        {
+        "label": "РРМ",
+        "value": "РРМ"
+        },
+        {
+        "label": "РЭ",
+        "value": "РЭ"
+        },
+        {
+        "label": "СКЗКМ",
+        "value": "СКЗКМ"
+        },
+        {
+        "label": "Сеть",
+        "value": "Сеть"
+        },
+        {
+        "label": "СМЭВ",
+        "value": "СМЭВ"
+        },
+        {
+        "label": "СУЗ",
+        "value": "СУЗ"
+        },
+        {
+        "label": "CЭ",
+        "value": "СЭ"
+        },
+        {
+        "label": "ЭДО",
+        "value": "ЭДО"
+        },
+        {   
+        "label": "честныйзнак.рф",
+        "value": "честныйзнак.рф"
+        },
+        {
+        "label": "DDoS",
+        "value": "DDoS"
+        },
+        {
+        "label": "confluence.crpt.ru",
+        "value": "confluence.crpt.ru"
+        },
+        {
+        "label": "crpt.ru",
+        "value": "crpt.ru"
         },
     ],
     
