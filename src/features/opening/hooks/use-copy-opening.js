@@ -32,7 +32,7 @@ export const useCopyOpening = (qualities, stand, tg, sysselect, priority, effect
             `\n**Бизнес-аффект:** ${systemBissnes}` +
             `\n` +
             `\n**${hourStart}:${minutesStart}**` +
-            `\n**Примечание:** ${openingDescription}`
+            `\n${openingDescription}`
         )
     }
 
