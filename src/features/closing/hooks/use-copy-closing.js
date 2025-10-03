@@ -33,7 +33,7 @@ export const useCopyClosing = (qualities, stand, tg, sysselect, priority, effect
         `\n**Бизнес-аффект:** ${systemBissnes}` +
         `\n` +
         `\n**${hourStart}:${minutesStart}**` +
-        `\n**Примечание:** ${closingDescription}`
+        `\n${closingDescription}`
     )
 
     const copySummary = () => {
