@@ -7,9 +7,9 @@ import {sortTg} from '../../helpers/var'
 
 export const useMi = () => {
     const dispatch = useDispatch()
-    const {stand, tg, priority} = useSelector(store => selectControlInfo(store).controls)
+    const {stand, sysselect, tg, priority} = useSelector(store => selectControlInfo(store).controls)
     const {support, dev, miNumber, title, toGo, toDev, calls} = useSelector(store => selectMiInfo(store).data)
-    const {copySummary} = useCopyMi({stand, tg, priority, support, dev, miNumber, title, toGo, toDev, calls})
+    const {copySummary} = useCopyMi({stand, sysselect, tg, priority, support, dev, miNumber, title, toGo, toDev, calls})
 
     const handleChange = (e) => {
         dispatch(setAnimation(false))
@@ -26,5 +26,5 @@ export const useMi = () => {
 
     }
 
-    return {stand, tg: sortTg(tg), priority, dev, support, miNumber, title, toGo, toDev, calls, handleChange, copySummary}
+    return {stand, tg: sortTg(tg), sysselect, priority, dev, support, miNumber, title, toGo, toDev, calls, handleChange, copySummary}
 }

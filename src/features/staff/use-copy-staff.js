@@ -17,8 +17,10 @@ export const useCopyStaff = (staffPerson) => {
     const day = addZero(date.getDate())
     const month = addZero(date.getMonth() + 1) // месяцы с 0 до 11
     const year = date.getFullYear()
-    const hourStart = new Date(Date.parse(startTime)).getHours()
-    const minutesStart = new Date(Date.parse(startTime)).getMinutes()
+    const hourStart = addZero(date.getHours())
+    const minutesStart = addZero(date.getMinutes())
+    //const hourStart = new Date(Date.parse(startTime)).getHours()
+    //const minutesStart = new Date(Date.parse(startTime)).getMinutes()
  
     const str = (
         `**FYI**` +

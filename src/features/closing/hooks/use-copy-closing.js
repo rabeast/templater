@@ -2,7 +2,7 @@ import {printTg, printDay, addZero} from '../../../helpers/var'
 
 export const useCopyClosing = (qualities, stand, tg, sysselect, priority, effect, isInside, openingTitle, jiraId, startTime, systemAdmins, systemBissnes, finishTime, duration, closingDescription) => {
     const inside = isInside ? `**ВНУТРЕННИЙ**\n` : ''
-    const standOut = stand ? `${stand} ` : ''
+    //const standOut = stand ? `${stand} ` : ''
     const qualitiesOut = qualities ? `${qualities}` : ''
     const printTgTxt = printTg(tg)
 

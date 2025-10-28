@@ -3,7 +3,7 @@ import TextareaAutosize from 'react-textarea-autosize'
 import {useMi} from './use-mi'
 
 const Mi = ({setAlert, start, mi}) => {
-    const {stand, tg, priority, dev, support, miNumber, title, toGo, toDev, calls, handleChange, copySummary} = useMi()
+    const {tg, sysselect, priority, dev, support, miNumber, title, toGo, toDev, calls, handleChange, copySummary} = useMi()
     return(
         <div
             id='mi'
@@ -12,7 +12,7 @@ const Mi = ({setAlert, start, mi}) => {
             <div className="card-content white-text summary-head">
 
                 <div className="summary__checkbox-content">
-                    <span className="card-title staff-title">MASS</span>
+                    <span className="card-title staff-title">MI</span>
                 </div>
             </div>
 
@@ -54,9 +54,9 @@ const Mi = ({setAlert, start, mi}) => {
                     </label>
                 </form>
 
-                <p className='mi-control'><span>{support}</span> завела массовый инцидент <span>MI{miNumber}</span></p>
+               
                 <p className='mi-control'>Приоритет: <span>{priority ? priority : 'Средний'}</span></p>
-                <p className='mi-control'>Контур: <span>{stand ? stand : 'ПРОД'}</span></p>
+                <p className='mi-control'>Система: <span>{sysselect ? sysselect : 'ПРОД'}</span></p>
                 <p className='mi-control'>ТГ: <span>{tg ? tg : 'Не определено'}</span></p>
 
                 <form className='mi-body'>
@@ -68,6 +68,8 @@ const Mi = ({setAlert, start, mi}) => {
                         onChange={handleChange}
                     />
                 </form>
+                <p className='mi-control'><span>{support}</span> завела массовый инцидент <span>MI{miNumber}</span></p>
+
 
                 <div className="mi-sub-control" style={dev ? {justifyContent: 'space-between'} : undefined}>
                     <div className="mi-desc">
